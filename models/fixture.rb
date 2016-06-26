@@ -1,6 +1,3 @@
-# Use inner joins if models need to be able to request date from one another
-# - Create instance methods and/or class methods for the required CRUD operations - .save(), .find(), .update(), .delete()
-
 class Fixture
   attr_reader :id, :match_id, :team_id
 
