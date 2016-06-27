@@ -2,13 +2,12 @@ DROP TABLE fixtures;
 DROP TABLE matches;
 DROP TABLE teams;
 
-
 CREATE TABLE matches(
   id SERIAL4 primary key,
   home_team_id INT2 not null,
   away_team_id INT2 not null,
   home_team_score INT2 not null,
-  away_team_score INT2 not null
+  away_team_score INT not null
 );
 
 CREATE TABLE teams(

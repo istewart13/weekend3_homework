@@ -18,7 +18,7 @@ class Team
   end
 
   def matches()
-    sql = "SELECT matches.* FROM matches INNER JOIN fixtures ON fixtures.match_id = matches.id WHERE team_id = #{@id};"
+    sql = "SELECT * FROM matches WHERE matches.home_team_id = #{@id} OR matches.away_team_id = #{@id};"
     match_data = @runner.run(sql)
     match = match_data.map { |match_data| Match.new(match_data, @runner) }
     return match
